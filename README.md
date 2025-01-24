@@ -9,8 +9,6 @@ The Recipe Recommendation System is a web-based application designed to suggest 
 
 - User-Friendly Interface: A simple and intuitive interface for users.
 
-- Fast Recommendations: Powered by a pre-trained model for quick results.
-
 ## Tech Stack
 
 ### Frontend
