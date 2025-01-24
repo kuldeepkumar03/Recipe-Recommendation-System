@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #fff;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #218838;
+}
+.recommendations {
+    margin-top: 20px;
+    text-align: left;
+}
+.recommendations h2 {
+    color: #ddd;
+}
