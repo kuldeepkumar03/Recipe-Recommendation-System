@@ -48,3 +48,15 @@ The Recipe Recommendation System is a web-based application designed to suggest 
     - Flask connects the frontend and backend.
 
     - The dataset is loaded directly for processing without additional database integration.
+
+## Project Files
+
+1. app.py: Main application file containing the Flask backend logic.
+
+2. res_Recommendation_system.ipynb: Notebook for preprocessing the dataset and training the model.
+
+3. cleaned_recipes(Final_Dataset).csv: Final dataset used for recommendations.
+
+4. ingredients.txt: List of available ingredients for reference.
+
+5. model_n.pkl: Pickle file containing the trained recommendation model.
