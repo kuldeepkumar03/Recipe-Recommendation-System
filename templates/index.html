@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendation System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Recommendation System</h1>
+        <form id="recommendationForm">
+            <label for="ingredients">Enter Ingredients:</label>
+            <input type="text" id="ingredients" name="ingredients" placeholder="Enter ingredients with comma separated and without space" required>
+            <button type="submit">Get Recommendations</button>
+        </form>
+        
+        <div class="recommendations" id="recommendations">
+            <!-- Recommendations will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('recommendationForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const ingredients = document.getElementById('ingredients').value;
+            const recommendationsDiv = document.getElementById('recommendations');
+            recommendationsDiv.innerHTML = '<p>Loading...</p>';
+
+            try {
+                const response = await fetch('/recommend', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `ingredients=${encodeURIComponent(ingredients)}`,
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    recommendationsDiv.innerHTML = '<h2>Recommended Recipes:</h2>';
+                    const list = document.createElement('ul');
+                    data.recommendations.forEach(recipe => {
+                        const item = document.createElement('li');
+                        item.innerHTML = `
+                            <strong>Recipe Name:</strong> ${recipe['Recipe Name']}<br>
+                            <strong>Extra Ingredients Count:</strong> ${recipe['Extra Ingredients Count']}<br>
+                            <strong>Extra Ingredients:</strong> ${recipe['Extra Ingredients']}<br>
+                            <strong>Link:</strong> <a href="${recipe['Link']}" target="_blank">View Recipe</a>
+                        `;
+                        list.appendChild(item);
+                    });
+                    recommendationsDiv.appendChild(list);
+                } else {
+                    recommendationsDiv.innerHTML = `<p style="color: red;">Error: ${data.error}</p>`;
+                }
+            } catch (error) {
+                recommendationsDiv.innerHTML = `<p style="color: red;">An error occurred: ${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>
