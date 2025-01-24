@@ -15,36 +15,36 @@ The Recipe Recommendation System is a web-based application designed to suggest 
 
 ### Frontend
 
-HTML
+- HTML
 
-CSS
+- CSS
 
 ### Backend
 
-Python (Flask framework)
+- Python (Flask framework)
 
 ### Database
 
-No separate database is used. The system directly uses the provided dataset.
+- No separate database is used. The system directly uses the provided dataset.
 
 ### Deployment
 
-The application is deployed on Render.
+- The application is deployed on Render.
 
 ## Dataset
 
-The dataset contains cleaned and preprocessed recipes in a CSV format.
+- The dataset contains cleaned and preprocessed recipes in a CSV format.
 
-The ingredients.txt file lists available ingredients for reference.
+- The ingredients.txt file lists available ingredients for reference.
 
 ## Implementation Details
 
-Model Training: The recommendation model is pre-trained and saved as model_n.pkl.
+1. Model Training: The recommendation model is pre-trained and saved as model_n.pkl.
 
-Core Logic: Implements the recommendation system using cosine similarity and machine learning techniques.
+2. Core Logic: Implements the recommendation system using cosine similarity and machine learning techniques.
 
-Integration:
+3. Integration:
 
-Flask connects the frontend and backend.
+-- Flask connects the frontend and backend.
 
-The dataset is loaded directly for processing without additional database integration.
+-- The dataset is loaded directly for processing without additional database integration.
