@@ -60,3 +60,8 @@ The Recipe Recommendation System is a web-based application designed to suggest 
 4. ingredients.txt: List of available ingredients for reference.
 
 5. model_n.pkl: Pickle file containing the trained recommendation model.
+
+## Flow of Project
+
+![Recipe Recommendation System](images/flow.png "Screenshot of the app")
+
