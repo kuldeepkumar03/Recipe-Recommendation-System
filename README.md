@@ -45,6 +45,6 @@ The Recipe Recommendation System is a web-based application designed to suggest 
 
 3. Integration:
 
-  - Flask connects the frontend and backend.
+    - Flask connects the frontend and backend.
 
-  - The dataset is loaded directly for processing without additional database integration.
+    - The dataset is loaded directly for processing without additional database integration.
