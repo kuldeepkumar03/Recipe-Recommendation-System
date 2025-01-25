@@ -64,4 +64,4 @@ The Recipe Recommendation System is a web-based application designed to suggest 
 ![Recipe Recommendation System](images/flow.png "Screenshot of the app")
 
 ## Demo Video
-[Demo Video](images/demo video(1).mp4)
+[Demo Video](images/video.mp4)
